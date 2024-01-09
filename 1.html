@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>FrozenH</title>
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+  <!-- Font google  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Kanit&display=swap" rel="stylesheet">
+  <!-- -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <header>
+        <nav>
+          <div class="nav-logo">
+            <a href="index.html" class="" style="display: flex;align-items: center;text-align: center">
+              <div class="Frozen-logo">
+                <img class="" src="img/Frozen-logo.png" alt="FrozenH" style="width: auto; height: 87px;">
+              </div>
+            </a>
+               <button class="nav-hambur" style="background-color: #6940ff; padding: 12px; border-radius: 5px; border: none; color: #fff;font-size: 15px" onclick="toggleNav()">
+                 <span class="fa fa-bars" style=""></span>
+                </button>
+          </div>
+            <ul class="nav-links">
+                <li><a href="#" onclick="toggleNav()"><i class="fas fa-home"></i> หน้าหลัก</a></li>
+                <li><a href="1.html" onclick="toggleNav()"><i class="fas fa-shopping-cart"></i> สินค้า</a></li>
+                <li><a href="#" onclick="toggleNav()"><i class="fas fa-user"></i> สมาชิก</a></li>
+                <li><a href="#" onclick="toggleNav()"><i class="fas fa-sign-in-alt"></i> เข้าสู่ระบบ</a></li>
+                <li><a href="#" onclick="toggleNav()" style="margin-right: 20px;"><i class="fas fa-user-plus"></i> สมัครสมาชิก</a></li>
+            </ul>
+        </nav>
+  </header>
+  <div class="ph1">
+     <img class="imgh1" src="img/01.png" alt="Image" style="width: 100%;">
+  <div class="cody2">
+<div class="card">
+  <img src="https://img2.pic.in.th/pic/-27_20240108232937.png" alt="Product Image">
+  <div class="card-body">
+    <h2>FrozenH-Rov V.1</h2>
+    <h4 style="color: #3000e0; font-size: 17px">999,999,999 บาท</h4>
+    <button onclick="buyProduct()">สั่งซื้อสินค้า</button>
+    <p style="color: dimgray; font-size: 15px; margin: 5px 0;">สินค้าจำนวน 0 ชิ้น</p>
+  </div>
+</div>
+<div class="card">
+  <img src="https://img2.pic.in.th/pic/-27_20240108232937.png" alt="Product Image">
+  <div class="card-body">
+    <h2>FrozenH-Roblox V.1</h2>
+    <h4 style="color: #3000e0; font-size: 17px">999,999,999 บาท</h4>
+    <button onclick="buyProduct()">สั่งซื้อสินค้า</button>
+    <p style="color: dimgray; font-size: 15px; margin: 5px 0;">สินค้าจำนวน 0 ชิ้น</p>
+  </div>
+</div>
+<div class="card">
+  <img src="https://img2.pic.in.th/pic/-27_20240108232937.png" alt="Product Image">
+  <div class="card-body">
+    <h2>FrozenH-Injection V.1</h2>
+    <h4 style="color: #3000e0; font-size: 17px">999,999,999 บาท</h4>
+    <button onclick="buyProduct()">สั่งซื้อสินค้า</button>
+    <p style="color: dimgray; font-size: 15px; margin: 5px 0;">สินค้าจำนวน 0 ชิ้น</p>
+  </div>
+</div>
+
+
+
+
+
+
+
+  <footer>
+      <div class="">
+        <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+          &copy; 2023 <a class="border-bottom" href="#">FrozenH</a>, All Right Reserved.
+          Designed By <a class="">SK Design</a>
+        </div>
+      </div>
+  </footer>
+    </div>
+  </div>
+
+  
+ <script>
+  
+  function toggleNav() {
+  document.querySelector(".nav-links").classList.toggle("show");
+  }
+  
+
+ </script>
+  <script src="main.js"></script>
+</body>
+</html>
