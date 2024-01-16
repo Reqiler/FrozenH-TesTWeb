@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>FrozenH</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+  <!-- Font google  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Kanit&display=swap" rel="stylesheet">
+  <!-- -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <header>
+    <nav>
+      <div class="nav-mb">
+        <a href="index.html">
+          <div>
+            <img class="nav-logo" src="img/Frozen-logo.png" alt="FrozenH">
+          </div>
+        </a>
+        <button class="nav-hambur" onclick="toggleNav()">
+          <span class="fa fa-bars"></span>
+        </button>
+      </div>
+      <ul class="nav-links">
+        <li><a href="index.html" onclick="toggleNav()"><i class="fas fa-home"></i> หน้าหลัก</a></li>
+        <li><a href="categories.html" onclick="toggleNav()"><i class="fas fa-shopping-cart"></i> สินค้า</a></li>
+        <li><a href="ur-account.html" onclick="toggleNav()"><i class="fas fa-user"></i> สมาชิก</a></li>
+        <li class="mainbtn"><a href="login-register.html" onclick="toggleNav()"><i class="fas fa-sign-in-alt"></i> เข้าสู่ระบบ</a></li>
+      </ul>
+    </nav>
+  </header>
+  <div class="cody1">
+    
+  <div class="form1 active" id="loginForm">
+  <form id="loginF">
+  <h2>เข้าสู่ระบบ</h2>
+  <p id="result01" style="font-size: 18px"></p>
+  <div class="input-container">
+    <label for="username">ชื่อผู้ใช้</label>
+    <input type="text" id="username" name="username" placeholder="Username" required>
+  </div>
+  <div class="input-container">
+    <label for="password">รหัสผ่าน</label>
+    <input type="password" id="password" name="password" placeholder="••••••••••••••" required>
+  </div>
+  <br>
+  <button type="submit" onclick="error()">เข้าสู่ระบบ</button>
+  <br>
+  <a style="font-size:15px;text-decoration: underline; color: darkblue" onclick="toggleForm()">ยังไม่มีบัญชีใช่ไหม? สมัครสมาชิก</a>
+  </form>
+  </div>
+  
+  <div class="form1" id="registerForm">
+  <form id="Register-f" >
+    <h2>สมัครสมาชิก</h2>
+    <div class="input-container">
+      <label class="wuser0" for="username">ชื่อผู้ใช้</label>
+      <input type="text" id="username" name="username" required minlength="5" maxlength="15" placeholder="Username 5-15 characters" pattern="[A-Za-z0-9_.]+">
+    </div>
+    <div class="input-container">
+      <label for="email">อีเมล</label>
+      <input type="email" id="email" name="email" required maxlength="50"
+      placeholder="User@example.com">
+    </div>
+    <div class="input-container">
+      <label for="password">รหัสผ่าน</label>
+      <input type="password" id="password" name="password" required minlength="8" maxlength="22" placeholder="Min 8 characters">
+    </div>
+    <div class="input-container">
+      <label for="password2">ยืนยันรหัสผ่าน</label>
+      <input type="password" id="password2" name="password2" required minlength="8" maxlength="22" placeholder="Confirm password">
+    </div>
+    <label style="color: red;font-size: 15px">! มีการจำกัดในการสมัครสมาชิก</label>
+    <label style="color: red;font-size: 15px;margin-top: -9px;margin-bottom: 10px"> ! โปรดตรวจสอบข้อมูลก่อนกดสมัครสมาชิก</label>
+    <button onclick="error()" type="submit" class="btn00z">สมัครสมาชิก</button>
+    <br>
+    <a style="font-size:15px;text-decoration: underline; color: darkblue" onclick="toggleForm()">มีบัญชีแล้วใช่ไหม? เข้าสู่ระบบ</a>
+  </form>
+  </div>
+  
+  
+  
+  </div>
+  
+ <footer>
+     <div class="">
+       <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+         &copy; 2023 <a class="border-bottom" href="#">FrozenH</a>, All Right Reserved.
+         Designed By <a class="" href="https://www.facebook.com/SK.Design.Artwork?mibextid=ZbWKwL">SK Design</a>
+       </div>
+     </div>
+   </footer>
+  
+  
+  <script src="main.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
+ <script>
+  
+  function toggleNav() {
+  document.querySelector(".nav-links").classList.toggle("show");
+  }
+  
+  function toggleForm() {
+      const loginForm = document.getElementById('loginForm');
+      const registerForm = document.getElementById('registerForm');
+
+      if (loginForm.classList.contains('active')) {
+        registerForm.classList.remove('none-active');
+        loginForm.classList.remove('active');
+        loginForm.classList.add('none-active');
+        setTimeout(function() {
+          registerForm.style.display = 'block';
+          
+          registerForm.classList.add('active');
+          loginForm.style.display = 'none';
+        }, 300);
+      //  registerForm.classList.add('active');
+      } else {
+        loginForm.classList.remove('none-active');
+        registerForm.classList.remove('active');
+        registerForm.classList.add('none-active');
+        setTimeout(function() {
+          
+          loginForm.style.display = 'block';
+          loginForm.classList.add('active');
+          registerForm.style.display = 'none';
+        }, 300);
+      //  registerForm.classList.add('noneActive');
+      }
+    }
+
+
+
+ </script>
+
+</body>
+</html>

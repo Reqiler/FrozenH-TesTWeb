@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>FrozenH</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+  <!-- Font google  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Kanit&display=swap" rel="stylesheet">
+  <!-- -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <header>
+        <nav>
+          <div class="nav-mb">
+            <a href="index.html">
+              <div>
+                <img class="nav-logo" src="img/Frozen-logo.png" alt="FrozenH">
+              </div>
+            </a>
+               <button class="nav-hambur" onclick="toggleNav()">
+                 <span class="fa fa-bars"></span>
+                </button>
+          </div>
+            <ul class="nav-links">
+                <li><a href="index.html" onclick="toggleNav()"><i class="fas fa-home"></i> หน้าหลัก</a></li>
+                <li><a href="categories.html" onclick="toggleNav()"><i class="fas fa-shopping-cart"></i> สินค้า</a></li>
+                <li><a href="ur-account.html" onclick="toggleNav()"><i class="fas fa-user"></i> สมาชิก</a></li>
+                <li class="mainbtn"><a href="login-register.html" onclick="toggleNav()"><i class="fas fa-sign-in-alt"></i> เข้าสู่ระบบ</a></li>
+            </ul>
+        </nav>
+  </header>
+  
+  <div class="fzh1">
+     <img class="imgh1" src="img/h-banner.gif" alt="Image" style="width: 100%;">
+     <div class="announce-box">
+       <i class="fas fa-volume-up" style="margin-right: 8px;font-size: 20px"></i>
+         <div class="announce-t">
+           <div class="">ตอนนี้ยัง login ไม่ได้ เว็บพึ่งเปิดให้บริการอาจจะข้อผิดพลาด มีปัญหาโปรดติดต่อแอดมิน!</div>
+         </div>
+     </div>
+   </div>
+
+<div class="container-pd">
+  
+ <div style="display: flex; width: 100%; align-items: center;">
+        <h2>
+          สินค้าแนะนำสำหรับคุณ
+        </h2>
+        <a href="categories.html" style="text-decoration: none; color: #3000e0;"><h4>
+          ดูทั้งหมด
+        </a> 
+  </div>
+<div class="section-pd">
+<div class="card">
+  <img src="img/imgL1.jpeg" alt="Product Image">
+  <div class="card-body">
+    <h2>รูปสุดโครตเท่ L1</h2> 
+    <h4 style="color: #3000e0; font-size: 17px">0 บาท : ฟรี</h4> 
+    <button onclick="buyProduct()">สั่งซื้อสินค้า</button>
+    <p style="color: dimgray; font-size: 15px; margin: 5px 0;">สินค้าจำนวน 257 ชิ้น</p>
+  </div>
+</div>  
+
+<div class="card">
+  <img src="https://img2.pic.in.th/pic/-27_20240108232937.png" alt="Product Image">
+  <img class="pd-soldout" src="img/pd-soldout.png" alt="Sold Out">
+  <div class="card-body">
+    <h2>FrozenH-Roblox V.1</h2>
+    <h4 style="color: #3000e0; font-size: 17px">999,999,999 บาท</h4>
+    <button onclick="error()">สั่งซื้อสินค้า</button>
+    <p style="color: dimgray; font-size: 15px; margin: 5px 0;">สินค้าจำนวน 0 ชิ้น</p>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://img2.pic.in.th/pic/-27_20240108232937.png" alt="Product Image">
+  <img class="pd-soldout" src="img/pd-soldout.png" alt="Sold Out">
+  <div class="card-body">
+    <h2>FrozenH-Injection V.1</h2>
+    <h4 style="color: #3000e0; font-size: 17px">999,999,999 บาท</h4>
+    <button onclick="error()">สั่งซื้อสินค้า</button>
+    <p style="color: dimgray; font-size: 15px; margin: 5px 0;">สินค้าจำนวน 0 ชิ้น</p>
+  </div>
+</div>
+
+
+</div>
+
+ <div style="display: flex; width: 100%; align-items: center;">
+        <h2>
+          สินค้า Premium
+        </h2>
+        <a href="categories.html" style="text-decoration: none; color: #3000e0;"><h4>
+          ดูทั้งหมด
+        </a> 
+  </div>
+<div class="section-pd">
+
+<div class="card">
+  <img src="https://img2.pic.in.th/pic/-27_20240108232937.png" alt="Product Image">
+  <img class="pd-soldout" src="img/pd-soldout.png" alt="Sold Out">
+  <div class="card-body">
+    <h2>FrozenH-Rov V.1</h2>
+    <h4 style="color: #3000e0; font-size: 17px">999,999,999 บาท</h4>
+    <button onclick="error()">สั่งซื้อสินค้า</button>
+    <p style="color: dimgray; font-size: 15px; margin: 5px 0;">สินค้าจำนวน 0 ชิ้น</p>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://img2.pic.in.th/pic/-27_20240108232937.png" alt="Product Image">
+  <img class="pd-soldout" src="img/pd-soldout.png" alt="Sold Out">
+  <div class="card-body">
+    <h2>FrozenH-Rov V.2</h2>
+    <h4 style="color: #3000e0; font-size: 17px">999,999,999 บาท</h4>
+    <button onclick="error()">สั่งซื้อสินค้า</button>
+    <p style="color: dimgray; font-size: 15px; margin: 5px 0;">สินค้าจำนวน 0 ชิ้น</p>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://img2.pic.in.th/pic/-27_20240108232937.png" alt="Product Image">
+  <img class="pd-soldout" src="img/pd-soldout.png" alt="Sold Out">
+  <div class="card-body">
+    <h2>FrozenH-Rov V.3</h2>
+    <h4 style="color: #3000e0; font-size: 17px">999,999,999 บาท</h4>
+    <button onclick="error()">สั่งซื้อสินค้า</button>
+    <p style="color: dimgray; font-size: 15px; margin: 5px 0;">สินค้าจำนวน 0 ชิ้น</p>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://img2.pic.in.th/pic/-27_20240108232937.png" alt="Product Image">
+  <img class="pd-soldout" src="img/pd-soldout.png" alt="Sold Out">
+  <div class="card-body">
+    <h2>FrozenH-Rov V.3.5</h2>
+    <h4 style="color: #3000e0; font-size: 17px">999,999,999 บาท</h4>
+    <button onclick="error()">สั่งซื้อสินค้า</button>
+    <p style="color: dimgray; font-size: 15px; margin: 5px 0;">สินค้าจำนวน 0 ชิ้น</p>
+  </div>
+</div>
+
+
+
+</div>
+
+</div>
+
+ <footer>
+     <div class="">
+       <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+         &copy; 2023 <a class="border-bottom" href="#">FrozenH</a>, All Right Reserved.
+         Designed By <a class="" href="https://www.facebook.com/SK.Design.Artwork?mibextid=ZbWKwL">SK Design</a>
+       </div>
+     </div>
+   </footer>
+  
+  <script src="main.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
+ <script>
+  
+  function toggleNav() {
+    const navbarShow = document.querySelector(".nav-links");
+  
+    navbarShow.classList.toggle("show");
+  }
+  
+  
+
+ </script>
+
+</body>
+</html>

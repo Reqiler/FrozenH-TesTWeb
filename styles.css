@@ -11,30 +11,37 @@ body {
   text-align: center;
   margin: 0;
   padding: 0;
-  height: 100vh;
   display: flex;
   align-items: center;
-  justify-content: space-around;
-  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 90px;
+  height: 90vh;
 }
 
 .cody2 {
+  flex-direction: column;
+  flex-wrap: wrap;
   text-align: center;
-  margin: 0;
-  padding: 0;
-  height: 100vh;
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: center;
+  margin-top: 130px;
+}
+
+.section-pd {
+  margin: 0 15px;
+  align-items: center;
+  text-align: center;
+  display: flex;
   flex-wrap: wrap;
-  margin-top: 10%;
+/*  height: 100vh; */
 }
 
 nav {
   margin: 0;
   padding: 0;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-between; 
   align-items: center;
   background-color: #080045;
   color: white;
@@ -44,9 +51,9 @@ nav {
   width: 99%;
   top: 0;
   position: fixed;
+  z-index: 9998;
 }
-.nav-logo {
-  justify-content: space-between;
+.nav-mb {
   align-items: center;
   text-align: center;
   display: flex;
@@ -62,8 +69,6 @@ nav {
 .nav-links li {
   display: flex;
   margin: 2px;
-  margin-left: 0px;
-  left: 0px;
 }
 
 .nav-links a {
@@ -77,18 +82,196 @@ nav {
   color: #967AFF;
 }
 
+.nav-logo {
+  width: auto; 
+  max-height: 87px;
+  margin-top: 7px;
+}
+
 .nav-hambur {
   display: none;
   cursor: pointer;
-  margin-left: 8rem;
+  margin: auto 10px auto auto;
+  border: none;
+  padding: 12px; 
+  border-radius: 5px; 
+  color: #fff;
+  font-size: 15px;
+  background-color: #6940ff;
 }
 
-  .ph1 {
-    margin-top: 90px;
+.form1.active {
+  display: block;
+  animation: fadeInUp 0.4s;
+}
+
+.form1.none-active {
+  display: block;
+  animation: fadeOutDown 0.3s;
+}
+
+.form1 {
+  display: none;
+}
+
+.fzh1 {
+  display: block;
+  margin: 100px 10px 0 10px;
+ }
+ 
+ .fzh1 img {
+  border-radius: 10px;
+ }
+
+.container-pd h2 {
+  color: #282828;
+  margin: 30px 0 5px 20px;
+ }
+ .container-pd h4 {
+  margin: 30px 0 5px 15px;
+ }
+ 
+ .card {
+  display: block;
+ /* flex-direction: column;
+  align-items: center; */
+  justify-content: center;
+  background-color: #fff;
+  padding: 15px;
+  border: 2px solid #6940ff;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin: 10px 15px;
+}
+
+.card .pd-soldout {
+  display: flex;
+  z-index: 5;
+  margin-top: -255px;
+  border-radius: 10px;
+  object-fit: cover; /* ทำให้รูปภาพทำเต็มพื้นที่ของ container */
+}
+
+.card img {
+  border-radius: 10px;
+/*  width: 100%;
+  max-height: 250px;  ปรับความสูงสูงสุดของรูปภาพ */
+  object-fit: cover; /* ทำให้รูปภาพทำเต็มพื้นที่ของ container */
+}
+
+.card-body h2, .card-body h4 {
+  text-align: left;
+  display: flex;
+  color: #282828;
+  left: 0;
+  margin: 5px 0;
+}
+
+.card button {
+  background-color: #3000e0;
+  color: #fff;
+  padding: 10px 60px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  font-family: 'Kanit', sans-serif;
+  margin-top: 10px; /* เพิ่มระยะห่างระหว่างปุ่มกับข้อความ */
+}
+ 
+ .announce-box {
+   align-items: center;
+   display: flex;
+   margin: 20px 10px 0 10px;
+   padding: 15px 10px;
+   border: 2px solid #6940ff;
+   border-radius: 10px;
+   background-color: #fff;
+   box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
   }
+  .announce-t{
+   overflow: hidden;
+   font-size: 18px;
+   width: 100%;
+   background-color: #fff;
+  }
+  .announce-t div {
+    white-space: nowrap;
+    animation: scroll-box 8s linear infinite;
+  }
+    @keyframes scroll-box {
+    0% {
+      transform: translateX(115%);
+    }
+    20% {
+      opacity: 0;
+    }
+    25% {
+      opacity: 1;
+    }
+    35% {
+      text-shadow: #FF003A 0 0 10px;
+    }
+    70% {
+      text-shadow: #F800FF 0 0 10px;
+    }
+    100% {
+      transform: translateX(-190%);
+    }
+  }
+
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+}
+
+@keyframes fadeOutDown {
+  0% {
+    transform: translateY(0%);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(20%);
+    opacity: 0;
+  }
+}
   
 @media only screen and (min-width: 768px) {
-  
+  .card {
+  width: 250px;
+ }
+
+.card img {
+  width: 100%;
+  max-height: 250px;
+ }
+ 
+   .announce-t div {
+    white-space: nowrap;
+    animation: scroll-box 11s linear infinite;
+  }
+    @keyframes scroll-box {
+    0% {
+      transform: translateX(110%);
+    }
+    35% {
+      text-shadow: #FF003A 0 0 10px;
+    }
+    70% {
+      text-shadow: #F800FF 0 0 10px;
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+ 
 }
 
 @media only screen and (max-width: 768px) {
@@ -101,24 +284,105 @@ nav {
     position: absolute;
     background-color: #080045;
     z-index: 2;
-    top: -220%;
+    top: -230%;
     box-sizing: border-box;
     padding: 10px;
     transition: top 0.4s ease;
   }
+  
+  .nav-mb {
+    align-items: center;
+    width: 93%;
+    height: 90px;
+    background-color: #080045;
+    margin-bottom: 1px;
+  }
+  
+  .nav-links li {
+    width: 90%;
+    margin: 0 5px;
+    border-top: 0.5px solid #FFF;
+  }
+  
+  .nav-links a {
+    overflow: hidden;
+    width: 100%;
+    text-align: left;
+  }
 
   .nav-links.show {
     top: 64px;
+    z-index: 9995;
   }
 
   .nav-hambur {
     display: flex;
     cursor: pointer;
   }
-  footer {
-    margin-top: 35px;
+  
+  .nav-hambur:hover {
+    background-color: #A086FF;
+  }
+  
+  .fzh1 {
+    margin: 90px 0 0 0;
+  }
+  
+  .fzh1 img {
+    border-radius: 0;
+  }
+  
+  .card {
+  width: 300px;
+}
+
+.card .pd-soldout {
+  display: flex;
+  margin-top: -305px;
+}
+
+.card img {
+  width: 100%;
+  max-height: 300px; /* ปรับความสูงสูงสุดของรูปภาพ */
   }
 }
+
+.card-profile {
+  width: 300px;
+  display: block;
+  justify-content: center;
+  background-color: #fff;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin: 10px 15px;
+}
+
+.card-profile img {
+  width: 150px; 
+  border-radius: 150px;
+}
+
+.buy-product {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 20px;
+  background-color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+
+.buy-product button {
+  margin-right: 10px;
+  cursor: pointer;
+}
+
 
  form {
   background-color: #fff;
@@ -158,7 +422,7 @@ button {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-h2 {
+form h2 {
   color: #333;
   margin-bottom: 30px;
 }
@@ -168,53 +432,24 @@ form label {
   margin: 5px 0;
   color: #555;
 }
-.card {
-  display: flex;
-  width: 270px;
-  flex-direction: column;
-/*  align-items: center; */
-  justify-content: center;
-  background-color: #fff;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  margin: 10px; /* เพิ่มระยะห่างระหว่าง card แต่ละอัน */
-}
 
-.card img {
-  width: 100%;
-  max-height: 270px; /* ปรับความสูงสูงสุดของรูปภาพ */
-  object-fit: cover; /* ทำให้รูปภาพทำเต็มพื้นที่ของ container */
-}
-
-.card-body h2, .card-body h4 {
-  text-align: left;
-  display: flex;
-  color: #282828;
-  left: 0;
-  margin: 5px 0;
-}
-
-.card button {
-  background-color: #3000e0;
-  color: #fff;
-  padding: 10px 60px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  font-size: 16px;
-  font-family: 'Kanit', sans-serif;
-  margin-top: 10px; /* เพิ่มระยะห่างระหว่างปุ่มกับข้อความ */
-}
+label.wuser0::after {
+  content: ' *ห้ามใช้อักษรพิเศษ';
+  color: red;
+  font-size: 13px;
+  margin-left: 5px;
+  margin-top: 2px;
+ }
 
 footer {
+  z-index: 2;
   width: 100%;
-
+  margin-top: 10%;
   background-color: #080045;
   color: white;
   text-align: center;
-  font-size: 12px;
-  padding: 15px 0;
+  font-size: 13px;
+  padding: 20px 0;
   position: relative;
   clear: both;
 }
@@ -222,3 +457,4 @@ footer a {
   text-decoration: none;
   color: #967AFF;
 }
+
