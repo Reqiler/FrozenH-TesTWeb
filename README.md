@@ -1,1 +1,1 @@
-Simple web
+Simple web shop
